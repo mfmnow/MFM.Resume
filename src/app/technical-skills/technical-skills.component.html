@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-lg-8 col-md-6" style="width:610px;padding:0px;padding-right:5px;margin-left:8px;">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+        <i class="fas fa-chart-bar fa-fw"></i>
+				&nbsp;<b>Technical Skills</b>
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body" style="height:560px;padding:8px;">
+				<ul class="list-group">
+					<li *ngFor="let TechnicalSkill of TechnicalSkills" class="list-group-item">
+						<i class="fa {{TechnicalSkill.Icon}} fa-fw"></i> <b>{{TechnicalSkill.Category}}:</b> {{TechnicalSkill.Skills}} 
+						<span class="pull-right text-muted small">
+                                        <div class="progress active">
+                                            <div class="progress-bar progress-bar-{{TechnicalSkill.Class}}" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width.px]="TechnicalSkill.SkillLevel">
+                                            </div>
+                                        </div>
+                                    </span>
+					</li>
+					
+				</ul>
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<div class="col-lg-4 col-md-6" style="width:400px;padding:0px;">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<i class="fas fa-check-square fa-fw"></i> 
+        &nbsp;<b>Other Skills</b>
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body" style="height:560px;padding:8px;">
+				<ul class="list-group list-group2">
+					<li *ngFor="let OtherSkill of OtherSkills" class="list-group-item">
+						&#x02022; {{OtherSkill.Skills}}
+						<span class="pull-right text-muted small"><em>{{OtherSkill.Category}}</em>
+                                    </span>
+					</li>					
+				</ul>
+				<!-- /.list-group -->
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+</div>
