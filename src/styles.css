@@ -635,3 +635,6 @@ table.dataTable thead .sorting:after {
             padding-top: 0px;
             padding-bottom: 0px;
         }
+        body {
+    background-color: #ffffff;
+}
